@@ -1,5 +1,7 @@
 # job-hunt-daily — Release Notes
 
+![Job Hunt Daily]()
+
 A Claude skill that runs a personalized job search: scans job boards, scores openings against your resume and preferences, and gives you a short ranked report with direct apply links.
 
 ## What it does
