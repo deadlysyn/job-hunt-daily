@@ -1,6 +1,6 @@
 # job-hunt-daily — Release Notes
 
-![Job Hunt Daily]()
+![Job Hunt Daily](https://github.com/deadlysyn/job-hunt-daily/blob/5cb306d0e115c90a2c325e33452c3684b0ec2639/assets/Main%401x.png)
 
 A Claude skill that runs a personalized job search: scans job boards, scores openings against your resume and preferences, and gives you a short ranked report with direct apply links.
 
