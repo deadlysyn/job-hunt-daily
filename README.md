@@ -1,6 +1,6 @@
 # job-hunt-daily — Release Notes
 
--![Job Hunt Daily](https://github.com/deadlysyn/job-hunt-daily/blob/5cb306d0e115c90a2c325e33452c3684b0ec2639/assets/Main%401x.png)
+![Job Hunt Daily](https://github.com/deadlysyn/job-hunt-daily/blob/5cb306d0e115c90a2c325e33452c3684b0ec2639/assets/Main%401x.png)
 
 A Claude skill that runs a personalized job search: scans job boards, scores openings against your resume and preferences, and gives you a short ranked report with direct apply links.
 
@@ -80,7 +80,7 @@ Pay comparisons already adapt to your currency (not just USD), and the remote/lo
 
 ## Visual status tracking
 
--![Kanban Mode](https://github.com/deadlysyn/job-hunt-daily/blob/831fe1199d5bc7b1668b01d323b20914cddf532b/assets/job-hunt-daily.png)
+![Kanban Mode](https://github.com/deadlysyn/job-hunt-daily/blob/831fe1199d5bc7b1668b01d323b20914cddf532b/assets/job-hunt-daily.png)
 
 Clicking an apply link isn't tracked by anything — the skill now makes status explicit instead of leaving it invisible:
 
