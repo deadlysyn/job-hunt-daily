@@ -1,6 +1,6 @@
 # job-hunt-daily — Release Notes
 
-![Job Hunt Daily](https://github.com/deadlysyn/job-hunt-daily/blob/5cb306d0e115c90a2c325e33452c3684b0ec2639/assets/Main%401x.png)
+-![Job Hunt Daily](https://github.com/deadlysyn/job-hunt-daily/blob/5cb306d0e115c90a2c325e33452c3684b0ec2639/assets/Main%401x.png)
 
 A Claude skill that runs a personalized job search: scans job boards, scores openings against your resume and preferences, and gives you a short ranked report with direct apply links.
 
@@ -78,7 +78,26 @@ If your home region isn't the US, you can also choose to **include US-based role
 
 Pay comparisons already adapt to your currency (not just USD), and the remote/location gates check whichever locations you're actually eligible for, rather than assuming a single country.
 
+## Visual status tracking
+
+-![Kanban Mode](https://github.com/deadlysyn/job-hunt-daily/blob/5cb306d0e115c90a2c325e33452c3684b0ec2639/assets/job-hunt-daily.png)
+
+Clicking an apply link isn't tracked by anything — the skill now makes status explicit instead of leaving it invisible:
+
+- **A Kanban board is the primary way to see and change status.** Four columns — Not Reviewed, Applied, Interviewing, Passed — with one card per role (title, company, score, a direct link to the posting, and status buttons). It's a real, persistent artifact: click a status button any time, from any device, and it's saved immediately, no need to go through chat.
+- **Chat shorthand still works** as a shortcut — reply "applied: 1, 3" or "pass: GitLab" after any report — and updates land on the board too, so the two never drift apart.
+- **A text log is kept as a backup.** If the board is ever unreachable, the skill can still track decisions from the log alone, and can recreate the board from it.
+- The board's link is created once during setup (or on request) and reused every run — the skill upserts new roles into it after each report, without ever overwriting a status you've already set.
+
+## Scoring preferences (optional)
+
+Two new optional preferences, asked about during setup:
+
+- **Title preference:** if two title categories both make it past your filters (for example, SRE/DevOps roles and Platform Engineer roles included via a duties-match exception), you can tell the skill to favor one over the other. It's a soft nudge — a strong role in the deprioritized category can still rank well, it just loses a small amount of ground in close calls.
+- **Skill-category weighting:** for infra/ops-focused roles, you can tell the skill to treat a whole category — like programming languages — as supporting evidence rather than a primary requirement. A posting that lists a language as "required" won't drag the score down if you're missing it, and having it won't inflate the score either; it just gets mentioned as a nice-to-have note when relevant.
+
 ## Known limitations
+
 
 
 - LinkedIn applicant counts are only visible if you connect Gmail or forward alerts — otherwise freshness scoring relies on posting age alone.
